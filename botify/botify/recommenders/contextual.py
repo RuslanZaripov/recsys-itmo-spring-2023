@@ -10,9 +10,9 @@ class Contextual(Recommender):
     recommendations found for the track.
     """
 
-    def __init__(self, tracks_redis, catalog):
-        self.tracks_redis = tracks_redis
-        self.fallback = Random(tracks_redis)
+    def __init__(self, tracks_redis_connection, catalog):
+        self.tracks_redis = tracks_redis_connection
+        self.fallback = Random(tracks_redis_connection)
         self.catalog = catalog
 
     def recommend_next(self, user: int, prev_track: int, prev_track_time: float) -> int:

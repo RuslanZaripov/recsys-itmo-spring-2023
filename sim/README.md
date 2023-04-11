@@ -22,6 +22,7 @@
 3. Добавляем текущую директорию в $PYTHONPATH
    ```
    export PYTHONPATH=${PYTHONPATH}:.
+   set PYTHONPATH=%PYTHONPATH%;.
    ```
 4. Симулятор можно запустить в "ручном" режиме, чтобы самостоятельно подбирать рекомендации для пользователя. 
    Это режим для ознакомления с симулятором.
@@ -39,6 +40,9 @@
    ```
    python sim/run.py --episodes 1000 --config config/env.yml multi --processes 4
    ```   
+   ```
+   docker cp recommender-container:/app/log "C:/Users/rusla/Desktop/ITMO/6-sem/recsys/recsys-itmo-spring-2023-hw/jupyter/data"
+   ```
    
 ## Идеи на будущее
 

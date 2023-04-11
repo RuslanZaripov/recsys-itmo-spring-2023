@@ -24,6 +24,9 @@ class Catalog:
         self.tracks = []
         self.top_tracks = []
         self.tracks_with_diverse_recs = []
+        self.user_history = {}
+        self.user_highly_rated = {}
+        self.user_listened_tracks_amount = {}
 
     # TODO Seminar 6 step 1: Configure reading tracks with diverse recommendations
     def load(self, catalog_path, top_tracks_path, tracks_with_diverse_recs_path):
